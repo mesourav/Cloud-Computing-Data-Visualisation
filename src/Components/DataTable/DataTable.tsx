@@ -58,7 +58,6 @@ const DataTableComponent = ({ data, title }: { data: any[]; title: string }) => 
         disableColumnMenu
         pageSizeOptions={[10, 25, 50, 100]}
         columnVisibilityModel={{
-          // Hide columns status and traderName, the other columns will remain visible
           id: false,
           InstanceId: false,
         }}
