@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import RawDataAnalysis from "./Pages/RawDataAnalysis/RawDataAnalysis";
+import Navbar from "./Components/Navbar/Navbar";
+import Applications from "./Pages/Applications/Applications";
+import Resources from "./Pages/Resources/Resources";
 
 function App() {
+  const [section, setSection] = useState(0);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar setSection={setSection} section={section} />
+      {section === 0 && <RawDataAnalysis />}
+      {section === 1 && <Applications />}
+      {section === 2 && <Resources />}
     </div>
   );
 }

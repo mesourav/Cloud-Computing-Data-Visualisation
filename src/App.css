@@ -1,38 +1,86 @@
-.App {
+.bar-component {
+  max-width: 800px;
+  margin: 0px auto;
+  padding-bottom: 50px;
+}
+
+.heading {
   text-align: center;
+  margin-bottom: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.leftBar {
+  width: 200px;
+  background: black;
+  left: 0;
   min-height: 100vh;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 0.3fr auto;
+}
+
+.leftBarContent {
+  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.leftBarContent p {
   color: white;
+  width: 100%;
+  text-align: center;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.leftBarContent .active {
+  background-color: #8a74a8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.allApplications {
+  text-align: center;
+}
+.allApplications .MuiChip-filled {
+  background: rgb(167 115 115);
+  color: white;
+  font-size: 15px;
+  margin: 15px;
+}
+
+.datatable {
+  height: 500px;
+  padding: 5px;
+  width: 900px;
+  margin: 0px auto;
+  margin-top: 40px;
+  margin-bottom: 45px;
+}
+.datagrid {
+  color: gray;
+}
+
+.datatableTitle {
+  width: 100%;
+  font-size: 30px;
+  color: black;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.MuiDataGrid-withBorderColor {
+  border-color: black !important;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
   }
 }
