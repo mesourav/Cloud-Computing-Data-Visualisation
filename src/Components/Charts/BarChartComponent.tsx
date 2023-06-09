@@ -17,7 +17,7 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 interface IBarProps {
   rawData: Array<IRawData>;
   title: string;
-  topic: string;
+  topic: keyof IRawData;
   label: string;
   dataKeyValue: string;
   backgroundColor: string;

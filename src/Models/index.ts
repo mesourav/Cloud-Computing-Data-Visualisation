@@ -10,4 +10,8 @@ export interface IRawData {
   UnitOfMeasure: string;
   Location: string;
   ServiceName: string;
+  totalCost: string;
+  consumedQuantity: string;
+  cost: string;
+  totalConsumedQuantity: string;
 }

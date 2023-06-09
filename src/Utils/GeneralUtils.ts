@@ -23,16 +23,16 @@ export const dataAnalysis = (rawData: Array<IRawData>, name: string) => {
   return dataForAnalysis;
 };
 
-export const totalCountOfKeyValueFormArray = (array: Array<IRawData>, keyName: string) => {
+export const totalCountOfKeyValueFormArray = (array: Array<IRawData>, keyName: keyof IRawData) => {
   let totalCount = 0;
-  array.map((data: any) => {
-    totalCount = totalCount + data[`${keyName}`];
+  array.map((data) => {
+    totalCount = totalCount + data[keyName];
     return 0;
   });
   return totalCount;
 };
 
-export const findLargestTen = (arr: Array<IRawData>, keyName: string) => {
-  arr.sort((a: any, b: any) => (a.totalCost < b[keyName] ? 1 : a[keyName] > b[keyName] ? -1 : 0));
+export const findLargestTen = (arr: Array<IRawData>, keyName: keyof IRawData) => {
+  arr.sort((a, b) => (a.totalCost < b[keyName] ? 1 : a[keyName] > b[keyName] ? -1 : 0));
   return arr.slice(0, 10);
 };
